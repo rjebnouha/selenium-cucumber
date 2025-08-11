@@ -44,16 +44,28 @@ public class LoginStepDefinition {
 
 	@When("Je clique sur le bouton login")
 	public void jeCliqueSurLeBoutonLogin() {
-		
-     seleniumUtils.click(LoginPage.getBtnLogin());
+
+		seleniumUtils.click(LoginPage.getBtnLogin());
 	}
 
 	@Then("Je me redirige vers la page dashboard {string}")
 	public void jeMeRedirigeVersLaPageDashboard(String text) throws InterruptedException {
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 		String result = seleniumUtils.readText(LoginPage.getTextDashboard());
 		Assertions.assertEquals(result, text);
 
 	}
+	
+	
+	public void openSiteAndLogin() throws InterruptedException {
+	    seleniumUtils.get(configFileReader.getProperty("home.url"));                     
+	    Thread.sleep(2000);            
 
-} 
+	    seleniumUtils.writeText(LoginPage.getUsername(), configFileReader.getProperty("home.username"));   
+	    seleniumUtils.writeText(LoginPage.getPassword(), configFileReader.getProperty("home.password"));   
+	    seleniumUtils.click(LoginPage.getBtnLogin());             
+
+	    Thread.sleep(3000);
+	} 
+
+}

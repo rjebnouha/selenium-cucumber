@@ -11,7 +11,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 		features = {"src/spec/features"},//emplacement des cas de test
 		plugin = {"pretty","html:target/report/cucumber-report.html", "json:target/report/cucumber.json"},//emplacement du rapport
 		//glue = {"steps_définitions"},
-		tags = ("@Login"),
+		tags = ("@Login"), 
 		monochrome = true,//ordonner la console
 		snippets = CAMELCASE
 		)
