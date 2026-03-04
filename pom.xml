@@ -139,16 +139,7 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>${webdrivermanager.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>projectAutomation2025</groupId>
-			<artifactId>projectAutomation2025</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>projectTestAutomation</groupId>
-			<artifactId>projectTestAutomation</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
 	</dependencies> 
 
   <build>
